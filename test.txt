@@ -1,0 +1,8 @@
+ select  *
+			  from Uploadnotice u
+			  left join Lccont c  on u.transno=c.transno 
+			  left join Lcnotconclusion lc on lc.contno=c.proposalcontno 
+			  where 
+			 		  c.esignflag='E'
+			  and lc.uploadflag='Y'  
+			  and u.noticeflag='W' 
